@@ -1,4 +1,4 @@
-# IKRAM Haute Joaillerie
+# IKRAM Haute Joaillerie & Beauty
 
 Ultra-luxury bilingual (EN / AR) jewelry & beauty boutique built with Next.js, Tailwind CSS, Framer Motion, and Zustand.
 

@@ -33,9 +33,9 @@ const amiri = Amiri({
 });
 
 export const metadata: Metadata = {
-  title: "IKRAM Haute Joaillerie & Parfums",
+  title: "IKRAM Haute Joaillerie & Beauty",
   description:
-    "Museum-grade jewelry, artisanal fragrances, and curated beauty by Founder Ikram.",
+    "Museum-grade jewelry and curated beauty by Founder Ikram.",
 };
 
 export default function RootLayout({

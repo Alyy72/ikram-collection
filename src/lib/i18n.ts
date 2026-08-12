@@ -3,8 +3,8 @@ import type { Locale } from "@/types";
 export const translations = {
   brand: { en: "IKRAM", ar: "إكرام" },
   tagline: {
-    en: "Haute Joaillerie & Parfums",
-    ar: "المجوهرات الراقية والعطور",
+    en: "Haute Joaillerie & Beauty",
+    ar: "المجوهرات الراقية والجمال",
   },
   nav: {
     home: { en: "Home", ar: "الرئيسية" },
@@ -20,20 +20,20 @@ export const translations = {
       ar: "حيث تلتقي المجوهرات الراقية بالنحت المعاصر",
     },
     sub: {
-      en: "A luminous maison of champagne gold, artisanal fragrance, and museum-grade craft — founded by Ikram.",
-      ar: "دار مضيئة من الذهب الشمباني والعطر الحرفي والحرفة بمستوى المتحف — أسستها إكرام.",
+      en: "A luminous maison of champagne gold, curated beauty, and museum-grade craft — founded by Ikram.",
+      ar: "دار مضيئة من الذهب الشمباني والجمال المختار والحرفة بمستوى المتحف — أسستها إكرام.",
     },
     cta: { en: "Explore Collection", ar: "استكشف المجموعة" },
   },
   story: {
     eyebrow: { en: "The Maison", ar: "الدار" },
     title: {
-      en: "Jewelry & perfume as modern art",
-      ar: "المجوهرات والعطور كفن معاصر",
+      en: "Jewelry & Beauty as modern art",
+      ar: "المجوهرات والجمال كفن معاصر",
     },
     body: {
-      en: "Ikram composes pieces that behave like sculptures and scents that linger like signatures — weightless on the body, monumental in presence. Each creation is finished in an editorial language of champagne gold, silk cream, and soft pearl light.",
-      ar: "تؤلف إكرام قطعاً تتصرف كمنحوتات وعطوراً تبقى كتوقيعات — خفيفة على الجسد، عظيمة في الحضور. كل إبداع يُكمَّل بلغة تحريرية من الذهب الشمباني والكريم الحريري وضوء اللؤلؤ الناعم.",
+      en: "Ikram composes pieces that behave like sculptures and beauty rituals that linger like signatures — weightless on the body, monumental in presence. Each creation is finished in an editorial language of champagne gold, silk cream, and soft pearl light.",
+      ar: "تؤلف إكرام قطعاً تتصرف كمنحوتات وطقوس جمال تبقى كتوقيعات — خفيفة على الجسد، عظيمة في الحضور. كل إبداع يُكمَّل بلغة تحريرية من الذهب الشمباني والكريم الحريري وضوء اللؤلؤ الناعم.",
     },
     philosophy: {
       en: "Design Philosophy",
@@ -110,8 +110,8 @@ export const translations = {
     shipping: { en: "Shipping & Returns", ar: "الشحن والإرجاع" },
     terms: { en: "Terms of Service", ar: "شروط الخدمة" },
     copyright: {
-      en: "All Rights Reserved © 2026 IKRAM Haute Joaillerie & Parfums.",
-      ar: "All Rights Reserved © 2026 IKRAM Haute Joaillerie & Parfums.",
+      en: "All Rights Reserved © 2026 IKRAM Haute Joaillerie & Beauty.",
+      ar: "All Rights Reserved © 2026 IKRAM Haute Joaillerie & Beauty.",
     },
   },
 } as const;

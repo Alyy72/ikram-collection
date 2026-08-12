@@ -27,7 +27,7 @@ export function Hero() {
       <motion.div style={{ y, scale }} className="absolute inset-0">
         <Image
           src="/products/p05.jpeg"
-          alt="IKRAM Haute Joaillerie & Parfums"
+          alt="IKRAM Haute Joaillerie & Beauty"
           fill
           priority
           className="object-cover object-[center_18%]"

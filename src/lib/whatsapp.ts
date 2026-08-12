@@ -31,7 +31,7 @@ export function buildWhatsAppUrl(params: {
   const lines: string[] = [];
 
   if (locale === "ar") {
-    lines.push("✦ طلب جديد — دار إكرام للمجوهرات والعطور");
+    lines.push("✦ طلب جديد — دار إكرام للمجوهرات والجمال");
     lines.push(`المرجع: ${orderRef}`);
     lines.push(`الاسم: ${customerName}`);
     lines.push(`الهاتف: ${customerPhone}`);
@@ -50,7 +50,7 @@ export function buildWhatsAppUrl(params: {
     lines.push(`الضريبة: ${formatPrice(tax, "ar")}`);
     lines.push(`الإجمالي: ${formatPrice(total, "ar")}`);
   } else {
-    lines.push("✦ New Concierge Order — IKRAM Haute Joaillerie & Parfums");
+    lines.push("✦ New Concierge Order — IKRAM Haute Joaillerie & Beauty");
     lines.push(`Reference: ${orderRef}`);
     lines.push(`Guest: ${customerName}`);
     lines.push(`Phone: ${customerPhone}`);

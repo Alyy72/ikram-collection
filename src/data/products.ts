@@ -1,7 +1,7 @@
 import type { Product } from "@/types";
 
 /**
- * IKRAM Haute Joaillerie & Parfums — retail catalog
+ * IKRAM Haute Joaillerie & Beauty — retail catalog
  * Summer Offer: items at AED 50 show originalPrice 75 (strikethrough)
  */
 export const PRODUCTS: Product[] = [
