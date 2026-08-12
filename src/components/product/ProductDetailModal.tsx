@@ -8,13 +8,13 @@ import { useUIStore } from "@/store/useUIStore";
 import { useLanguageStore } from "@/store/useLanguageStore";
 import { useCartStore } from "@/store/useCartStore";
 import {
-  formatPrice,
   getProductCategory,
   getProductName,
   getProductStory,
   getSecondaryImage,
-  WHATSAPP_NUMBER,
 } from "@/lib/products";
+import { generateOrderRef } from "@/lib/whatsapp";
+import { notifyConcierge } from "@/lib/notifyOrder";
 import { t } from "@/lib/i18n";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import {
@@ -27,6 +27,8 @@ export function ProductDetailModal() {
   const closeProduct = useUIStore((s) => s.closeProduct);
   const locale = useLanguageStore((s) => s.locale);
   const addItem = useCartStore((s) => s.addItem);
+  const setOrderRef = useCartStore((s) => s.setOrderRef);
+  const setShowOrderModal = useCartStore((s) => s.setShowOrderModal);
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
   const [zoomed, setZoomed] = useState(false);
@@ -54,13 +56,24 @@ export function ProductDetailModal() {
     setTimeout(() => setAdded(false), 1800);
   };
 
-  const inquireUrl = product
-    ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-        locale === "ar"
-          ? `مرحباً إكرام، أود الاستفسار عن: ${product.nameAr} (${product.sku}) — ${formatPrice(product.price, "ar")}`
-          : `Hello Ikram, I would like to inquire about: ${product.nameEn} (${product.sku}) — ${formatPrice(product.price, "en")}`,
-      )}`
-    : "#";
+  const handleInquire = () => {
+    if (!product) return;
+    const orderRef = generateOrderRef();
+    closeProduct();
+    setOrderRef(orderRef);
+    setShowOrderModal(true);
+    void notifyConcierge({
+      type: "inquiry",
+      orderRef,
+      locale,
+      productId: product.id,
+      productSku: product.sku,
+      productName: getProductName(product, locale),
+      quantity: qty,
+      total: product.price * qty,
+      createdAt: new Date().toISOString(),
+    });
+  };
 
   return (
     <AnimatePresence>
@@ -216,14 +229,13 @@ export function ProductDetailModal() {
                       ? "غير متوفر"
                       : "Sold Out"}
               </MagneticButton>
-              <a
-                href={inquireUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={handleInquire}
                 className="inline-flex items-center justify-center px-6 py-3.5 text-[11px] tracking-[0.22em] uppercase border border-gold/50 text-ink hover:bg-gold/10 transition-colors"
               >
                 {t(locale, "shop.inquire")}
-              </a>
+              </button>
             </div>
           </motion.div>
         </motion.div>

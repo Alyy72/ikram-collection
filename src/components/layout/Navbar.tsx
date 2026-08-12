@@ -41,10 +41,43 @@ function IconInstagram({ size = 18 }: { size?: number }) {
   );
 }
 
+function LanguageToggle({
+  compact = false,
+  className = "",
+}: {
+  compact?: boolean;
+  className?: string;
+}) {
+  const locale = useLanguageStore((s) => s.locale);
+  const toggleLocale = useLanguageStore((s) => s.toggleLocale);
+
+  return (
+    <button
+      type="button"
+      onClick={toggleLocale}
+      className={`shrink-0 tracking-[0.14em] text-ink/70 hover:text-gold transition-colors border border-gold/30 ${
+        compact ? "text-[10px] px-2 py-1" : "text-[11px] px-2.5 py-1.5"
+      } ${className}`}
+      aria-label="Toggle language"
+    >
+      {locale === "en" ? (
+        <span>
+          EN <span className="text-gold/50">|</span>{" "}
+          <span className="opacity-45">عربي</span>
+        </span>
+      ) : (
+        <span>
+          <span className="opacity-45">EN</span>{" "}
+          <span className="text-gold/50">|</span> عربي
+        </span>
+      )}
+    </button>
+  );
+}
+
 export function Navbar() {
   const pathname = usePathname();
   const locale = useLanguageStore((s) => s.locale);
-  const toggleLocale = useLanguageStore((s) => s.toggleLocale);
   const openCart = useCartStore((s) => s.openCart);
   const itemCount = useCartStore((s) => s.itemCount());
   const favCount = useFavoritesStore((s) => s.ids.length);
@@ -83,28 +116,11 @@ export function Navbar() {
             : "bg-white/80 backdrop-blur-md border-b border-gold/15"
         }`}
       >
-        <div className="mx-auto grid h-20 max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-5 md:px-10 gap-4">
-          {/* Far left: language + primary nav */}
-          <div className="flex items-center gap-6 md:gap-8 justify-self-start min-w-0">
-            <button
-              type="button"
-              onClick={toggleLocale}
-              className="shrink-0 text-[11px] tracking-[0.18em] text-ink/70 hover:text-gold transition-colors border border-gold/30 px-2.5 py-1.5"
-              aria-label="Toggle language"
-            >
-              {locale === "en" ? (
-                <span>
-                  EN <span className="text-gold/50">|</span>{" "}
-                  <span className="opacity-45">عربي</span>
-                </span>
-              ) : (
-                <span>
-                  <span className="opacity-45">EN</span>{" "}
-                  <span className="text-gold/50">|</span> عربي
-                </span>
-              )}
-            </button>
-
+        <div className="relative mx-auto flex h-16 sm:h-20 max-w-7xl items-center justify-between px-4 sm:px-8">
+          {/* Left cluster — language only on mobile, + nav on desktop */}
+          <div className="relative z-20 flex items-center gap-4 sm:gap-6 min-w-[4.5rem] sm:min-w-[7rem]">
+            <LanguageToggle compact className="sm:hidden" />
+            <LanguageToggle className="hidden sm:inline-flex" />
             <nav className="hidden lg:flex items-center gap-7">
               {links.slice(0, 2).map((link) => (
                 <Link
@@ -122,17 +138,17 @@ export function Navbar() {
             </nav>
           </div>
 
-          {/* Center brand */}
+          {/* Absolutely centered logo — never overlaps side clusters */}
           <Link
             href="/"
-            className="justify-self-center font-display text-2xl md:text-3xl tracking-[0.35em] text-ink px-2"
+            className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 font-display text-xl sm:text-2xl md:text-3xl tracking-[0.28em] sm:tracking-[0.35em] text-ink pointer-events-auto"
           >
             {t(locale, "brand")}
           </Link>
 
-          {/* Far right: secondary nav + icons */}
-          <div className="flex items-center gap-6 md:gap-8 justify-self-end">
-            <nav className="hidden lg:flex items-center gap-7">
+          {/* Right cluster */}
+          <div className="relative z-20 flex items-center gap-3 sm:gap-6 min-w-[4.5rem] sm:min-w-[7rem] justify-end">
+            <nav className="hidden lg:flex items-center gap-7 me-2">
               {links.slice(2).map((link) => (
                 <Link
                   key={link.href}
@@ -148,63 +164,61 @@ export function Navbar() {
               ))}
             </nav>
 
-            <div className="flex items-center gap-6 md:gap-8">
-              <a
-                href={INSTAGRAM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-ink/55 hover:text-gold transition-colors"
-                aria-label="Instagram"
-              >
-                <IconInstagram />
-              </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden xs:inline-flex sm:inline-flex text-ink/55 hover:text-gold transition-colors"
+              aria-label="Instagram"
+            >
+              <IconInstagram size={17} />
+            </a>
 
-              <button
-                type="button"
-                onClick={() => setSearchOpen(true)}
-                className="text-ink/55 hover:text-gold transition-colors"
-                aria-label={t(locale, "nav.search")}
-              >
-                <Search size={18} strokeWidth={1.4} />
-              </button>
+            <button
+              type="button"
+              onClick={() => setSearchOpen(true)}
+              className="text-ink/55 hover:text-gold transition-colors"
+              aria-label={t(locale, "nav.search")}
+            >
+              <Search size={17} strokeWidth={1.4} />
+            </button>
 
-              <Link
-                href="/shop"
-                className="relative text-ink/55 hover:text-gold transition-colors"
-                aria-label={t(locale, "nav.favorites")}
-              >
-                <Heart size={18} strokeWidth={1.4} />
-                {favCount > 0 && (
-                  <span className="absolute -top-2 -end-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-gold px-1 text-[9px] text-white">
-                    {favCount}
-                  </span>
-                )}
-              </Link>
+            <Link
+              href="/shop"
+              className="relative hidden sm:inline-flex text-ink/55 hover:text-gold transition-colors"
+              aria-label={t(locale, "nav.favorites")}
+            >
+              <Heart size={17} strokeWidth={1.4} />
+              {favCount > 0 && (
+                <span className="absolute -top-2 -end-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-gold px-1 text-[9px] text-white">
+                  {favCount}
+                </span>
+              )}
+            </Link>
 
-              <button
-                type="button"
-                onClick={openCart}
-                className="relative text-ink/55 hover:text-gold transition-colors"
-                aria-label={t(locale, "nav.cart")}
-              >
-                <ShoppingBag size={18} strokeWidth={1.4} />
-                {itemCount > 0 && (
-                  <span className="absolute -top-2 -end-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-gold px-1 text-[9px] text-white">
-                    {itemCount}
-                  </span>
-                )}
-              </button>
+            <button
+              type="button"
+              onClick={openCart}
+              className="relative text-ink/55 hover:text-gold transition-colors"
+              aria-label={t(locale, "nav.cart")}
+            >
+              <ShoppingBag size={17} strokeWidth={1.4} />
+              {itemCount > 0 && (
+                <span className="absolute -top-2 -end-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-gold px-1 text-[9px] text-white">
+                  {itemCount}
+                </span>
+              )}
+            </button>
 
-              <button
-                type="button"
-                className="lg:hidden text-ink/60"
-                onClick={() => setMobileOpen((v) => !v)}
-                aria-label="Menu"
-              >
-                <span className="block w-5 h-px bg-current mb-1.5" />
-                <span className="block w-5 h-px bg-current" />
-              </button>
-            </div>
+            <button
+              type="button"
+              className="lg:hidden text-ink/60 ms-0.5"
+              onClick={() => setMobileOpen((v) => !v)}
+              aria-label="Menu"
+            >
+              <span className="block w-5 h-px bg-current mb-1.5" />
+              <span className="block w-5 h-px bg-current" />
+            </button>
           </div>
         </div>
 
@@ -216,7 +230,13 @@ export function Navbar() {
               exit={{ height: 0, opacity: 0 }}
               className="lg:hidden overflow-hidden border-t border-gold/20 bg-white"
             >
-              <div className="flex flex-col gap-4 px-6 py-6">
+              <div className="flex flex-col gap-4 px-4 sm:px-8 py-5">
+                <div className="flex items-center justify-between pb-2 border-b border-gold/15">
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-ink/40">
+                    {locale === "ar" ? "اللغة" : "Language"}
+                  </span>
+                  <LanguageToggle compact />
+                </div>
                 {links.map((link) => (
                   <Link
                     key={link.href}
@@ -227,6 +247,14 @@ export function Navbar() {
                     {t(locale, `nav.${link.key}`)}
                   </Link>
                 ))}
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="sm:hidden inline-flex items-center gap-2 text-sm tracking-[0.2em] uppercase text-ink/70 hover:text-gold"
+                >
+                  <IconInstagram size={16} /> Instagram
+                </a>
               </div>
             </motion.div>
           )}
@@ -246,7 +274,7 @@ export function Navbar() {
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
-              className="mx-auto mt-28 max-w-2xl px-5"
+              className="mx-auto mt-24 max-w-2xl px-4 sm:px-5"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center gap-3 border-b border-gold/40 pb-3">

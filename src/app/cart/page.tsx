@@ -12,12 +12,10 @@ import {
   getProductById,
   getProductName,
 } from "@/lib/products";
-import { buildWhatsAppUrl, calcTotals, generateOrderRef } from "@/lib/whatsapp";
+import { calcTotals, generateOrderRef } from "@/lib/whatsapp";
+import { notifyConcierge } from "@/lib/notifyOrder";
 import { t } from "@/lib/i18n";
-import {
-  PriceDisplay,
-  SummerOfferBanner,
-} from "@/components/product/PriceDisplay";
+import { PriceDisplay } from "@/components/product/PriceDisplay";
 
 export default function CartPage() {
   const locale = useLanguageStore((s) => s.locale);
@@ -48,21 +46,27 @@ export default function CartPage() {
     }
     setError("");
     const orderRef = generateOrderRef();
-    const url = buildWhatsAppUrl({
-      items,
-      locale,
-      orderRef,
-      customerName: name.trim(),
-      customerPhone: phone.trim(),
-      note: note.trim() || undefined,
-    });
-    window.open(url, "_blank", "noopener,noreferrer");
+    const snapshot = [...items];
+
+    // Stay on-site — confirmation modal only (no WhatsApp redirect)
     setOrderRef(orderRef);
     setShowOrderModal(true);
     clearCart();
     setName("");
     setPhone("");
     setNote("");
+
+    void notifyConcierge({
+      type: "order",
+      orderRef,
+      locale,
+      customerName: name.trim(),
+      customerPhone: phone.trim(),
+      note: note.trim() || undefined,
+      items: snapshot,
+      total,
+      createdAt: new Date().toISOString(),
+    });
   };
 
   return (

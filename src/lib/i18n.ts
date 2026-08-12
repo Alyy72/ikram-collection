@@ -98,8 +98,8 @@ export const translations = {
   order: {
     title: { en: "Order Received", ar: "تم استلام الطلب" },
     body: {
-      en: "Thank you for your order. Founder Ikram and our concierge team have received your selection and will connect with you shortly on WhatsApp to finalize your delivery details.",
-      ar: "شكراً لطلبك. لقد استلمت المؤسسة إكرام وفريق الكونسيرج اختياراتك، وسنتواصل معك قريباً عبر الواتساب لإتمام تفاصيل التوصيل.",
+      en: "Thank you for your order. Founder Ikram and our concierge team have received your selection and will connect with you shortly to finalize your order details.",
+      ar: "شكراً لطلبك. لقد استلمت المؤسسة إكرام وفريق الكونسيرج اختياراتك، وسنتواصل معك قريباً لإتمام تفاصيل التوصيل.",
     },
     ref: { en: "Order Reference", ar: "مرجع الطلب" },
     close: { en: "Return to Maison", ar: "العودة إلى الدار" },
