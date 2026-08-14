@@ -1,8 +1,10 @@
 import type { Product } from "@/types";
 
 /**
- * IKRAM Haute Joaillerie & Beauty — retail catalog
- * Summer Offer: items at AED 50 show originalPrice 75 (strikethrough)
+ * IKRAM Haute Joaillerie & Beauty — audited unique catalog
+ * Visual duplicates consolidated (shell, finger-heart, airplane, heart lariat).
+ * Every product has a distinct image, SKU, title, and story.
+ * Summer Offer: AED 50 items include originalPrice 75.
  */
 export const PRODUCTS: Product[] = [
   {
@@ -52,46 +54,46 @@ export const PRODUCTS: Product[] = [
   {
     "id": "ikram-j04",
     "sku": "KRM-J-04",
-    "nameEn": "Soleil Medallion Necklace",
-    "nameAr": "قلادة سوليل الذهبية",
+    "nameEn": "La Perle Shell Pearl Necklace",
+    "nameAr": "قلادة صدفة اللؤلؤ",
     "categoryEn": "Haute Joaillerie",
     "categoryAr": "المجوهرات الراقية",
     "price": 50,
     "currency": "AED",
-    "image": "/products/p05.jpeg",
+    "image": "/products/p20.jpeg",
     "inStock": true,
-    "storyEn": "Inspired by golden sunrays, offering a warm shine to any statement look.",
-    "storyAr": "مستوحاة من أشعة الشمس الذهبية لتضفي توهجاً دافئاً على إطلالتك.",
+    "storyEn": "A sculptural gold shell that opens to reveal a luminous pearl — museum-grade romance on a fine chain.",
+    "storyAr": "صدفة ذهبية منحوتة تفتح لتكشف لؤلؤة مضيئة — رومانسية بمستوى المتحف على سلسلة رفيعة.",
     "originalPrice": 75,
     "isSummerOffer": true
   },
   {
     "id": "ikram-j05",
     "sku": "KRM-J-05",
-    "nameEn": "Grand Imperial Jewelry Set",
-    "nameAr": "طقم مجوهرات إمبريال الفاخر",
+    "nameEn": "Aviator Airplane Duo Set",
+    "nameAr": "طقم الطائرة المزدوج",
     "categoryEn": "Haute Joaillerie",
     "categoryAr": "المجوهرات الراقية",
-    "price": 58,
+    "price": 55,
     "currency": "AED",
     "image": "/products/p05.jpeg",
     "inStock": true,
-    "storyEn": "Curated duo set designed by Ikram to complete high-glamour couture wear.",
-    "storyAr": "طقم متناسق صممته إكرام ليتوج إطلالاتك الفاخرة."
+    "storyEn": "Matching airplane-charm necklace and bracelet — a minimalist ode to travel, curated by Ikram.",
+    "storyAr": "عقد وسوار متطابقان بتعليقة طائرة — تحية بسيطة للسفر اختارتها إكرام."
   },
   {
     "id": "ikram-j06",
     "sku": "KRM-J-06",
-    "nameEn": "Minimalist Atelier Bangle",
-    "nameAr": "سوار أتلييه العصري",
+    "nameEn": "Finger Heart Necklace & Stud Set",
+    "nameAr": "طقم قلادة وأقراط قلب الأصابع",
     "categoryEn": "Haute Joaillerie",
     "categoryAr": "المجوهرات الراقية",
     "price": 52,
     "currency": "AED",
     "image": "/products/p06.jpeg",
     "inStock": true,
-    "storyEn": "Sleek metallic curves tailored for comfortable everyday luxury stacking.",
-    "storyAr": "منحنيات معدنية مصقولة مصممة للارتداء اليومي الفاخر."
+    "storyEn": "A playful gold finger-heart silhouette for necklace and studs — contemporary affection, atelier-finished.",
+    "storyAr": "تصميم قلب الأصابع الذهبي للقلادة والأقراط — عاطفة عصرية بتشطيب المحترف."
   },
   {
     "id": "ikram-j07",
@@ -112,16 +114,16 @@ export const PRODUCTS: Product[] = [
   {
     "id": "ikram-j08",
     "sku": "KRM-J-08",
-    "nameEn": "Lumière Statement Bracelet",
-    "nameAr": "سوار لوميير البراق",
+    "nameEn": "Amour Ruby Heart Lariat",
+    "nameAr": "قلادة آمور لاريات بالقلب الياقوتي",
     "categoryEn": "Haute Joaillerie",
     "categoryAr": "المجوهرات الراقية",
     "price": 52,
     "currency": "AED",
     "image": "/products/p08.jpeg",
     "inStock": true,
-    "storyEn": "Radiant wrist statement crafted to catch light with subtle arm movement.",
-    "storyAr": "سوار متلألئ يلتقط الضوء برقة مع كل حركة."
+    "storyEn": "Twin crimson crystal hearts on a liquid gold lariat — romance composed as modern sculpture.",
+    "storyAr": "قلبان قرمزيان على لاريات ذهبية سائلة — رومانسية مؤلّفة كنحت معاصر."
   },
   {
     "id": "ikram-j09",
@@ -142,29 +144,13 @@ export const PRODUCTS: Product[] = [
   {
     "id": "ikram-j10",
     "sku": "KRM-J-10",
-    "nameEn": "Oasis Sculpted Gold Anklet",
-    "nameAr": "خلاخل أواسي المذهبة",
-    "categoryEn": "Haute Joaillerie",
-    "categoryAr": "المجوهرات الراقية",
-    "price": 50,
-    "currency": "AED",
-    "image": "/products/p09.jpeg",
-    "inStock": true,
-    "storyEn": "Glistening chain work designed for coastal sophistication.",
-    "storyAr": "سلسلة براقة صُممت لإضفاء لمسة راقية وجذابة.",
-    "originalPrice": 75,
-    "isSummerOffer": true
-  },
-  {
-    "id": "ikram-j11",
-    "sku": "KRM-J-11",
     "nameEn": "Haute Couture Jewel Hair Clip",
     "nameAr": "مشبك الشعر المرصع الفاخر",
     "categoryEn": "Haute Joaillerie",
     "categoryAr": "المجوهرات الراقية",
     "price": 50,
     "currency": "AED",
-    "image": "/products/p13.jpeg",
+    "image": "/products/p28.jpeg",
     "inStock": true,
     "storyEn": "Sculptural accessory designed to add runway glamor to styled hair.",
     "storyAr": "إكسسوار منحوت يضيف لمسة من عروض الأزياء العالمية لشعرك.",
@@ -172,22 +158,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-j12",
-    "sku": "KRM-J-12",
-    "nameEn": "Valence Layered Choker",
-    "nameAr": "عقد فالنس المتعدد الطبقات",
-    "categoryEn": "Haute Joaillerie",
-    "categoryAr": "المجوهرات الراقية",
-    "price": 55,
-    "currency": "AED",
-    "image": "/products/p12.jpeg",
-    "inStock": true,
-    "storyEn": "Dramatic multi-strand silhouette offering bold, runway-grade presence.",
-    "storyAr": "تصميم متعدد الطبقات يمنحك حضوراً واثقاً وفخماً."
-  },
-  {
-    "id": "ikram-j13",
-    "sku": "KRM-J-13",
+    "id": "ikram-j11",
+    "sku": "KRM-J-11",
     "nameEn": "Palais Pearl Accent Clip",
     "nameAr": "مشبك باليه اللؤلؤي",
     "categoryEn": "Haute Joaillerie",
@@ -202,8 +174,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-j14",
-    "sku": "KRM-J-14",
+    "id": "ikram-j12",
+    "sku": "KRM-J-12",
     "nameEn": "Sovereign Gold Chain Statement",
     "nameAr": "سلسلة سوفرين الذهبية الفاخرة",
     "categoryEn": "Haute Joaillerie",
@@ -216,8 +188,8 @@ export const PRODUCTS: Product[] = [
     "storyAr": "تحفة فنية ذهبية ذات ثقل وحضور تعبر عن الفخامة الملكية."
   },
   {
-    "id": "ikram-j15",
-    "sku": "KRM-J-15",
+    "id": "ikram-j13",
+    "sku": "KRM-J-13",
     "nameEn": "Mirage Crystal Charm Necklace",
     "nameAr": "قلادة ميراج الكريستالية",
     "categoryEn": "Haute Joaillerie",
@@ -232,22 +204,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-j16",
-    "sku": "KRM-J-16",
-    "nameEn": "Atelier Duo Gift Set",
-    "nameAr": "طقم هدايا أتلييه المزدوج",
-    "categoryEn": "Haute Joaillerie",
-    "categoryAr": "المجوهرات الراقية",
-    "price": 52,
-    "currency": "AED",
-    "image": "/products/p23.jpeg",
-    "inStock": true,
-    "storyEn": "Harmonized jewelry pair curated for memorable gifting moments.",
-    "storyAr": "ثنائي مجوهرات متناغم أُعد خصيصاً ليقدم كهدية لا تُنسى."
-  },
-  {
-    "id": "ikram-j18",
-    "sku": "KRM-J-18",
+    "id": "ikram-j14",
+    "sku": "KRM-J-14",
     "nameEn": "Majestic Gold Suite Set",
     "nameAr": "طقم مجوهرات ماجستيك الملكي",
     "categoryEn": "Haute Joaillerie",
@@ -260,8 +218,8 @@ export const PRODUCTS: Product[] = [
     "storyAr": "طقم كامل ومترابط متقن الصنع ليعكس أناقة المجتمع المرموق."
   },
   {
-    "id": "ikram-j19",
-    "sku": "KRM-J-19",
+    "id": "ikram-j15",
+    "sku": "KRM-J-15",
     "nameEn": "Cascade Chandelier Earrings",
     "nameAr": "أقراط كاسكيد الشاندلير",
     "categoryEn": "Haute Joaillerie",
@@ -276,8 +234,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-j22",
-    "sku": "KRM-J-22",
+    "id": "ikram-j16",
+    "sku": "KRM-J-16",
     "nameEn": "Solitaire Atelier Signet Ring",
     "nameAr": "خاتم سوليتير أتلييه الفاخر",
     "categoryEn": "Haute Joaillerie",
@@ -290,8 +248,8 @@ export const PRODUCTS: Product[] = [
     "storyAr": "خاتم صلب ذو سطح مصقول يضمن لك حضوراً عصرياً مميزاً."
   },
   {
-    "id": "ikram-j23",
-    "sku": "KRM-J-23",
+    "id": "ikram-j17",
+    "sku": "KRM-J-17",
     "nameEn": "Elegance Pendant & Earring Set",
     "nameAr": "طقم قلادة وأقراط إليجانس",
     "categoryEn": "Haute Joaillerie",
@@ -304,8 +262,8 @@ export const PRODUCTS: Product[] = [
     "storyAr": "طقم متناسق يدمج البريق الناعم مع دفء الأناقة اليومية."
   },
   {
-    "id": "ikram-j24",
-    "sku": "KRM-J-24",
+    "id": "ikram-j18",
+    "sku": "KRM-J-18",
     "nameEn": "Venetian Gold Strand Necklace",
     "nameAr": "قلادة السلسلة الفينيسية",
     "categoryEn": "Haute Joaillerie",
@@ -320,8 +278,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-j25",
-    "sku": "KRM-J-25",
+    "id": "ikram-j19",
+    "sku": "KRM-J-19",
     "nameEn": "Lustre Radiant Pendant",
     "nameAr": "قلادة لوستر البراقة",
     "categoryEn": "Haute Joaillerie",
@@ -336,29 +294,15 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-j26",
-    "sku": "KRM-J-26",
-    "nameEn": "Sculpted Atelier Cuff Bangle",
-    "nameAr": "سوار كاف المفتوح والمنحوت",
-    "categoryEn": "Haute Joaillerie",
-    "categoryAr": "المجوهرات الراقية",
-    "price": 55,
-    "currency": "AED",
-    "image": "/products/p26.jpeg",
-    "inStock": true,
-    "storyEn": "Bold architectural gold cuff designed to complete sleek tailored looks.",
-    "storyAr": "سوار ذهبي بارز ومفتوح أُعد ليكمل إطلالاتك العصرية."
-  },
-  {
-    "id": "ikram-j27",
-    "sku": "KRM-J-27",
+    "id": "ikram-j20",
+    "sku": "KRM-J-20",
     "nameEn": "Petite Stud Earrings",
     "nameAr": "أقراط ناعمة وأنيقة",
     "categoryEn": "Haute Joaillerie",
     "categoryAr": "المجوهرات الراقية",
     "price": 50,
     "currency": "AED",
-    "image": "/products/p19.jpeg",
+    "image": "/products/p31.jpeg",
     "inStock": true,
     "storyEn": "Minimalist studs serving subtle luxury for everyday wear.",
     "storyAr": "أقراط صغيرة تضمن لك الفخامة اليومية البسيطة.",
@@ -366,8 +310,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-j29",
-    "sku": "KRM-J-29",
+    "id": "ikram-j21",
+    "sku": "KRM-J-21",
     "nameEn": "Verona Gold Bangle",
     "nameAr": "سوار فيرونا الذهبي",
     "categoryEn": "Haute Joaillerie",
@@ -380,8 +324,8 @@ export const PRODUCTS: Product[] = [
     "storyAr": "تصميم معدني صلب وفاخر يدوم جماله على مر السنين."
   },
   {
-    "id": "ikram-b02",
-    "sku": "KRM-B-02",
+    "id": "ikram-b01",
+    "sku": "KRM-B-01",
     "nameEn": "Velvet Precision Lip Pen",
     "nameAr": "قلم الشفاه المخملي الدقيق",
     "categoryEn": "Curated Sets & Beauty",
@@ -396,8 +340,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b03",
-    "sku": "KRM-B-03",
+    "id": "ikram-b02",
+    "sku": "KRM-B-02",
     "nameEn": "High-Definition Lash Mascara",
     "nameAr": "ماسكات مكثفة ومحددة للرموش",
     "categoryEn": "Curated Sets & Beauty",
@@ -412,15 +356,15 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b04",
-    "sku": "KRM-B-04",
+    "id": "ikram-b03",
+    "sku": "KRM-B-03",
     "nameEn": "Silk Radiance Concealer",
     "nameAr": "كونسيلر الحرير المشع",
     "categoryEn": "Curated Sets & Beauty",
     "categoryAr": "أطقم ومستحضرات التجميل",
     "price": 50,
     "currency": "AED",
-    "image": "/products/q05.jpeg",
+    "image": "/products/q01.jpeg",
     "inStock": true,
     "storyEn": "Creamy, buildable coverage blurring imperfections with a luminous finish.",
     "storyAr": "تغطية كريمية مرنة تخفي العيوب وتمنحك لمسة إشراق طبيعية.",
@@ -428,8 +372,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b05",
-    "sku": "KRM-B-05",
+    "id": "ikram-b04",
+    "sku": "KRM-B-04",
     "nameEn": "Luminous Glass Lip Gloss",
     "nameAr": "ملمع الشفاه الزجاجي اللامع",
     "categoryEn": "Curated Sets & Beauty",
@@ -444,8 +388,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b06",
-    "sku": "KRM-B-06",
+    "id": "ikram-b05",
+    "sku": "KRM-B-05",
     "nameEn": "Sculpting Liquid Contour",
     "nameAr": "كونتور السائل لنحت الوجه",
     "categoryEn": "Curated Sets & Beauty",
@@ -460,8 +404,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b07",
-    "sku": "KRM-B-07",
+    "id": "ikram-b06",
+    "sku": "KRM-B-06",
     "nameEn": "Velvet Bloom Blush Stick",
     "nameAr": "ستيك بلاشر بلمسة مخملية",
     "categoryEn": "Curated Sets & Beauty",
@@ -476,8 +420,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b08",
-    "sku": "KRM-B-08",
+    "id": "ikram-b07",
+    "sku": "KRM-B-07",
     "nameEn": "Silky Powder Blush",
     "nameAr": "بلاشر بودرة حريري",
     "categoryEn": "Curated Sets & Beauty",
@@ -492,8 +436,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b09",
-    "sku": "KRM-B-09",
+    "id": "ikram-b08",
+    "sku": "KRM-B-08",
     "nameEn": "Radiant Flush Blush Stick",
     "nameAr": "ستيك بلاشر ناضر ومشيع",
     "categoryEn": "Curated Sets & Beauty",
@@ -508,8 +452,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b10",
-    "sku": "KRM-B-10",
+    "id": "ikram-b09",
+    "sku": "KRM-B-09",
     "nameEn": "Satin Glamour Eyeshadow Palette",
     "nameAr": "باليت ظلال العيون الساتانية",
     "categoryEn": "Curated Sets & Beauty",
@@ -524,8 +468,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b11",
-    "sku": "KRM-B-11",
+    "id": "ikram-b10",
+    "sku": "KRM-B-10",
     "nameEn": "Diamond Dust Powder Highlighter",
     "nameAr": "هايلايتر بودرة ببريق الألماس",
     "categoryEn": "Curated Sets & Beauty",
@@ -540,8 +484,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b12",
-    "sku": "KRM-B-12",
+    "id": "ikram-b11",
+    "sku": "KRM-B-11",
     "nameEn": "Golden Hour Highlighter Stick",
     "nameAr": "ستيك هايلايتر التوهج الذهبي",
     "categoryEn": "Curated Sets & Beauty",
@@ -556,8 +500,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b13",
-    "sku": "KRM-B-13",
+    "id": "ikram-b12",
+    "sku": "KRM-B-12",
     "nameEn": "Imperfection Blur Concealer",
     "nameAr": "كونسيلر إخفاء العيوب المتطور",
     "categoryEn": "Curated Sets & Beauty",
@@ -572,8 +516,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b14",
-    "sku": "KRM-B-14",
+    "id": "ikram-b13",
+    "sku": "KRM-B-13",
     "nameEn": "Starlight Champagne Highlighter",
     "nameAr": "هايلايتر الشامبانيا اللامع",
     "categoryEn": "Curated Sets & Beauty",
@@ -588,8 +532,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b15",
-    "sku": "KRM-B-15",
+    "id": "ikram-b14",
+    "sku": "KRM-B-14",
     "nameEn": "Couture Cream Cheek Blush",
     "nameAr": "بلاشر كريمي كوتور للخدود",
     "categoryEn": "Curated Sets & Beauty",
@@ -602,8 +546,8 @@ export const PRODUCTS: Product[] = [
     "storyAr": "كريم مخملي فاخر يذوب بسلاسة ليمنح بشرتك حيوية وشباباً."
   },
   {
-    "id": "ikram-b16",
-    "sku": "KRM-B-16",
+    "id": "ikram-b15",
+    "sku": "KRM-B-15",
     "nameEn": "Elixir Plumping Lip Gloss",
     "nameAr": "ملمع الشفاه المكثف والمغذي",
     "categoryEn": "Curated Sets & Beauty",
@@ -616,8 +560,8 @@ export const PRODUCTS: Product[] = [
     "storyAr": "تركيبة مغذية تبرز حجم الشفاه الطبيعي بلمعان زجاجي جذاب."
   },
   {
-    "id": "ikram-b17",
-    "sku": "KRM-B-17",
+    "id": "ikram-b16",
+    "sku": "KRM-B-16",
     "nameEn": "Opulent Mineral Highlighter",
     "nameAr": "هايلايتر المعدني الفاخر",
     "categoryEn": "Curated Sets & Beauty",
@@ -632,8 +576,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b18",
-    "sku": "KRM-B-18",
+    "id": "ikram-b17",
+    "sku": "KRM-B-17",
     "nameEn": "Volumizing Waterproof Mascara",
     "nameAr": "ماسكارا التكثيف المقاومة للماء",
     "categoryEn": "Curated Sets & Beauty",
@@ -648,8 +592,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b19",
-    "sku": "KRM-B-19",
+    "id": "ikram-b18",
+    "sku": "KRM-B-18",
     "nameEn": "Cristal Rose Lip Gloss",
     "nameAr": "ملمع الشفاه الكريستالي الوردي",
     "categoryEn": "Curated Sets & Beauty",
@@ -664,8 +608,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b20",
-    "sku": "KRM-B-20",
+    "id": "ikram-b19",
+    "sku": "KRM-B-19",
     "nameEn": "Flawless Coverage Concealer",
     "nameAr": "كونسيلر التغطية المثالية",
     "categoryEn": "Curated Sets & Beauty",
@@ -678,8 +622,8 @@ export const PRODUCTS: Product[] = [
     "storyAr": "تركيبة تغطية كاملة مخصصة لتندمج بسلاسة دون أي تكتل."
   },
   {
-    "id": "ikram-b21",
-    "sku": "KRM-B-21",
+    "id": "ikram-b20",
+    "sku": "KRM-B-20",
     "nameEn": "Radiance Perfecting CC Cream",
     "nameAr": "سي سي كريم لتصحيح وإشراق البشرة",
     "categoryEn": "Curated Sets & Beauty",
@@ -692,8 +636,8 @@ export const PRODUCTS: Product[] = [
     "storyAr": "إكسير يصحح لون البشرة ويمنحها حماية ولمسة لونية خفيفة."
   },
   {
-    "id": "ikram-b22",
-    "sku": "KRM-B-22",
+    "id": "ikram-b21",
+    "sku": "KRM-B-21",
     "nameEn": "Celestial Glow Highlighter",
     "nameAr": "هايلايتر التوهج السماوي",
     "categoryEn": "Curated Sets & Beauty",
@@ -708,8 +652,8 @@ export const PRODUCTS: Product[] = [
     "isSummerOffer": true
   },
   {
-    "id": "ikram-b24",
-    "sku": "KRM-B-24",
+    "id": "ikram-b22",
+    "sku": "KRM-B-22",
     "nameEn": "Artisan Makeup Brush Set",
     "nameAr": "طقم فرشي المكياج الاحترافي",
     "categoryEn": "Curated Sets & Beauty",
@@ -722,8 +666,8 @@ export const PRODUCTS: Product[] = [
     "storyAr": "مجموعة فرش فائقة النعومة أُعدت لتضمن لك تطبيق مكياج محترف."
   },
   {
-    "id": "ikram-b25",
-    "sku": "KRM-B-25",
+    "id": "ikram-b23",
+    "sku": "KRM-B-23",
     "nameEn": "Velvet Foundation Stick",
     "nameAr": "ستيك كريم الأساس المخملي",
     "categoryEn": "Curated Sets & Beauty",
@@ -736,8 +680,8 @@ export const PRODUCTS: Product[] = [
     "storyAr": "ستيك أساس عملي يندمج بسلاسة ليمنحك طبقة مخملية غير لامعة."
   },
   {
-    "id": "ikram-b31",
-    "sku": "KRM-B-31",
+    "id": "ikram-b24",
+    "sku": "KRM-B-24",
     "nameEn": "Enchanted Eyeshadow Compact",
     "nameAr": "باليت ظلال العيون الساحرة",
     "categoryEn": "Curated Sets & Beauty",
