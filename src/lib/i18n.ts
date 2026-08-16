@@ -110,9 +110,14 @@ export const translations = {
     shipping: { en: "Shipping & Returns", ar: "الشحن والإرجاع" },
     terms: { en: "Terms of Service", ar: "شروط الخدمة" },
     copyright: {
-      en: "All Rights Reserved © 2026 IKRAM Haute Joaillerie & Beauty.",
-      ar: "All Rights Reserved © 2026 IKRAM Haute Joaillerie & Beauty.",
+      en: "© 2026 IKRAM Haute Joaillerie & Beauty. All rights reserved.",
+      ar: "© 2026 IKRAM Haute Joaillerie & Beauty. All rights reserved.",
     },
+    createdBy: {
+      en: "Created by",
+      ar: "Created by",
+    },
+
   },
 } as const;
 
